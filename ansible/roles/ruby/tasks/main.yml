@@ -1,0 +1,8 @@
+- name: install ruby dev
+  apt: name=ruby1.9.1-dev state=present install_recommends=no update_cache=true
+
+- name: remove default gem source
+  command: gem sources -r http://rubygems.org/
+
+- name: add taobao gem
+  command: gem sources -a http://ruby.taobao.org/

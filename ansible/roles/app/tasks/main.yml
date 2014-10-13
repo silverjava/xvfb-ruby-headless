@@ -1,0 +1,6 @@
+- name: install gem packages
+  sudo_user: vagrant
+  gem: name={{item}} state=latest
+  with_items:
+    - headless
+    - selenium-webdriver
